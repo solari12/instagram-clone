@@ -9,7 +9,7 @@ const ReqUserPostCard = () => {
     <div className='w-full h-full'>
         <div>
             <div className='w-full grid grid-cols-3 gap-1.5 '>
-                <div class='posts h-[28.125rem]'>
+                <div class='posts h-lg'>
                         <img src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='w-full h-full object-cover'/>
                     <div class='stats' id='type'>
                         <img src={Reel} alt="" className='w-7 h-7'/>
