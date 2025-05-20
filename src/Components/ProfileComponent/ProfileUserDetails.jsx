@@ -53,7 +53,7 @@ const ProfileUserDetails = () => {
 
                     </div>
                 </div>
-                <div className='mx-10 py-10'>
+                <div className='mx-10 mt-10'>
                     <div className='flex space-x-10' >
                         <div className="flex flex-col items-center">
                             <div className="w-28 h-28 rounded-full border-2 border-slate-200 flex items-center justify-center">

@@ -4,8 +4,25 @@ import { IoReorderThree } from "react-icons/io5";
 import { Menu } from './SidebarConfig'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'  
+import { useLocation } from 'react-router-dom'
 const Sidebar = () => {
-  const [activeTab, setActiveTab] = useState(Menu[0].tittle)
+  const location = useLocation()
+  console.log("Path hiện tại:", location.pathname)
+  
+  const tabs = [
+    { title: 'Home', path: '/' },
+    { title: 'Profile', path: '/username' },
+    { title: 'Saved', path: '/saved' },
+  ];
+
+  const getActiveTab = (pathname) => {
+    const found = tabs.find(tab => tab.path === pathname);
+    return found ? found.title : tabs[0].title;
+  }
+
+  const initialTab = getActiveTab(location.pathname);
+
+  const [activeTab, setActiveTab] = useState(initialTab)
   const navigate = useNavigate()
   const handleTabClick = (tittle) => {
     setActiveTab(tittle)

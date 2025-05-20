@@ -1,0 +1,21 @@
+.posts{
+    position: relative;
+}
+.stats{
+    position: absolute;
+}
+#type{
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+.interact{
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.posts:hover #type,
+.posts:hover .interact {
+  opacity: 1;
+}
