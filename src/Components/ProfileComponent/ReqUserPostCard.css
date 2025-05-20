@@ -1,12 +1,19 @@
 .posts{
     position: relative;
 }
+.posts::after{
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
 .stats{
     position: absolute;
 }
 #type{
-    top: 0;
-    right: 0;
+    top: 0.75rem;
+    right: 0.75rem;
     opacity: 0;
 }
 .interact{
@@ -14,7 +21,9 @@
     left : 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+    z-index: 9999;
 }
+.posts:hover::after,
 .posts:hover #type,
 .posts:hover .interact {
   opacity: 1;

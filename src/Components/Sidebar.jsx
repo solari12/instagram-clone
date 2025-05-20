@@ -12,7 +12,7 @@ const Sidebar = () => {
   const tabs = [
     { title: 'Home', path: '/' },
     { title: 'Profile', path: '/username' },
-    { title: 'Saved', path: '/saved' },
+    { title: 'Saved', path: '/saved' }
   ];
 
   const getActiveTab = (pathname) => {
