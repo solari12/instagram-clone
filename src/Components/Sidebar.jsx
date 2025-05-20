@@ -23,16 +23,16 @@ const Sidebar = () => {
             <div className='pt-10'>
               <img className='w-40' src={InstagramLogo} alt="Instagram Logo" />
             </div>
-            <div className='mt-10'>
+            <div className='mt-5'>
                 {Menu.map((item)=>(
                   <div onClick={()=>{handleTabClick(item.tittle)}} className='flex items-center mb-5 cursor-pointer text-lg'>
                     {activeTab === item.tittle ? item.isActiveIcon : item.icon}
-                    <p>{item.tittle}</p>
+                    <p className={`${activeTab === item.tittle ? 'font-bold' : 'font-normal'}`}>{item.tittle}</p>
                   </div>
                 ))}
             </div>
           </div>
-            <div className='flex items-center cursor-pointer pb-10'>
+            <div className='flex items-center mb-5 cursor-pointer pb-10'>
               <IoReorderThree className='text-2xl'/>
               <p className='ml-5'>More</p>
             </div>

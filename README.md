@@ -1,3 +1,101 @@
+# Instagram Clone Project
+
+## Project Requirements / Yêu cầu dự án
+
+### English
+1. **Authentication System**
+   - User registration and login
+   - Password recovery
+   - Social media login integration
+
+2. **User Profile**
+   - Profile picture upload
+   - Bio and personal information
+   - Follow/Unfollow functionality
+   - Profile editing
+
+3. **Post Management**
+   - Create posts with images
+   - Add captions and hashtags
+   - Like and comment on posts
+   - Delete own posts
+
+4. **Feed Features**
+   - Infinite scroll feed
+   - Post filtering
+   - Explore page
+   - Save posts
+
+5. **Social Features**
+   - Follow/Unfollow users
+   - Direct messaging
+   - Notifications
+   - Activity feed
+
+6. **Technical Requirements**
+   - Responsive design
+   - Real-time updates
+   - Image optimization
+   - Secure authentication
+   - Performance optimization
+
+### Tiếng Việt
+1. **Hệ thống Xác thực**
+   - Đăng ký và đăng nhập người dùng
+   - Khôi phục mật khẩu
+   - Tích hợp đăng nhập qua mạng xã hội
+
+2. **Hồ sơ Người dùng**
+   - Tải lên ảnh đại diện
+   - Thông tin cá nhân và tiểu sử
+   - Chức năng theo dõi/bỏ theo dõi
+   - Chỉnh sửa hồ sơ
+
+3. **Quản lý Bài đăng**
+   - Tạo bài đăng với hình ảnh
+   - Thêm chú thích và hashtag
+   - Thích và bình luận bài đăng
+   - Xóa bài đăng của mình
+
+4. **Tính năng Bảng tin**
+   - Cuộn vô hạn
+   - Lọc bài đăng
+   - Trang khám phá
+   - Lưu bài đăng
+
+5. **Tính năng Xã hội**
+   - Theo dõi/Bỏ theo dõi người dùng
+   - Nhắn tin trực tiếp
+   - Thông báo
+   - Bảng tin hoạt động
+
+6. **Yêu cầu Kỹ thuật**
+   - Thiết kế responsive
+   - Cập nhật thời gian thực
+   - Tối ưu hóa hình ảnh
+   - Xác thực an toàn
+   - Tối ưu hóa hiệu suất
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+## Technologies Used
+- React
+- TypeScript
+- Material-UI
+- Firebase
+- Redux Toolkit
+- React Router
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
