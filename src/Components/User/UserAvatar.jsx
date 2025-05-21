@@ -1,14 +1,12 @@
 import React from 'react'
 
-const UserAvatar = ({ size = 10, src }) => {
-    const containerSize = `h-${size} w-${size}`;
-    const imgSize = `h-${size - 2} w-${size - 2}`;
+const UserAvatar = ({ size = 10, src, borderWidth = 3 }) => {
     return (
-        <div>
-            <div className={`bg-gradient-to-tr from-[#FFC900] to-[#D300C5] p-[2px] rounded-full flex justify-center items-center ${containerSize}`}>
-                <div className="h-full w-full bg-white rounded-full flex justify-center items-center">
+        <div className="relative">
+            <div className={`h-${size} w-${size} bg-gradient-to-tr from-[#FFC900] to-[#D300C5] p-[${borderWidth}px] rounded-full flex justify-center items-center`}>
+                <div className="h-full w-full bg-white rounded-full flex justify-center items-center overflow-hidden">
                     <img
-                        className={`rounded-full ${imgSize}`}
+                        className={`h-[calc(100%-${borderWidth * 2}px)] w-[calc(100%-${borderWidth * 2}px)] rounded-full object-cover`}
                         src={src}
                         alt="avatar"
                     />

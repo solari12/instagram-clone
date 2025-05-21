@@ -5,8 +5,8 @@ const PostCardDetail = () => {
         <div>
             <div className=' w-full h-full border-b border-b border-l-slate-500'>
                 <div>
-                    <div>
-                        <UserAvatar size={10} src='https://images.unsplash.com/photo-1742201949705-220268ad4467?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fHRvd0paRnNrcEdnfHxlbnwwfHx8fHw%3D'/>
+                    <div className='w-full h-full flex justify-center items-center'>
+                            <UserAvatar size={10} borderWidth={2} src='https://plus.unsplash.com/premium_photo-1722100466194-3896a8ad0279?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
                     </div>
                     <div>
                         <p>UserName</p>
