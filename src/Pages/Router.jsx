@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom'
 import Sidebar from '../Components/Sidebar'
 import HomePage from './HomePage/HomePage'
 import Profile from './ProfilePage/Profile'
-
 const Router = () => {
     return (
         <div>
