@@ -1,5 +1,6 @@
 import React from 'react'
 import Storycircle from '../../Components/Story/Storycircle'
+import PostCards from '../../Components/Posts/Postcards'
 const HomePage = () => {
   return (
     <div className='w-full'>
@@ -9,7 +10,7 @@ const HomePage = () => {
             <Storycircle/>
           </div>
           <div>
-            Posst
+            <PostCards/>
           </div>
         </div>
         <div className='flex-1'>

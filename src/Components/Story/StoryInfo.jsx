@@ -1,18 +1,10 @@
 import React from 'react'
-
+import UserAvatar from '../User/UserAvatar'
 const StoryInfo = () => {
     return (
         <div className='flex justify-center items-ceter'>
             <div className='flex-col justify-center items-center'>
-                <div className="h-16 w-16 bg-gradient-to-tr from-[#FFC900] to-[#D300C5] p-xxs rounded-full flex justify-center items-ceter" >
-                    <div className="h-full w-full bg-white rounded-full flex justify-center items-center">
-                        <img
-                            className="h-14 w-14 rounded-full"
-                            src="https://plus.unsplash.com/premium_photo-1722100466194-3896a8ad0279?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt=""
-                        />
-                    </div>
-                </div>
+                <UserAvatar size ={16} src='https://plus.unsplash.com/premium_photo-1747674292543-e2600bd34375?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D'/>
                 <div className='flex justify-center items-ceter'>
                     <p className='text-xs'>username</p>
                 </div>
