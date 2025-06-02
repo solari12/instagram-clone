@@ -1,4 +1,3 @@
-import React from 'react'
 import Options from '../../Assets/option.png'
 import Favorite from '../../Assets/favorite.png'
 import BubbleChat from '../../Assets/bubble-chat.png'
@@ -6,12 +5,35 @@ import Send from '../../Assets/send.png'
 import Save from '../../Assets/saved.png'
 import '../../Components/Posts/PostCardDetail.css'
 import { useState } from 'react';
-import ModalOptions from '../Modal/ModalOptions'; 
+import ModalOptions from '../Modal/ModalOptions';
+import Video from '../Video/Video';
+import yaoVideo from '../../Assets/Videos/yao.mp4';
+import ModalComent from '../Modal/ModalComent';
+
 const PostCardDetail = () => {
     const [comment, setComment] = useState('');
+    
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalComentOpen, setIsModalComentOpen] = useState(false);
+
+    const handleOpenModalComent = () => {
+        setIsModalComentOpen(true);
+    }
+    const handleCloseModalComent = () => {
+        setIsModalComentOpen(false);
+    }
+
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <div>
-            <div className=' w-full h-full border-b border-b border-l-slate-500 space-y-3 pb-5'>
+            <div className=' w-full h-full border-b border-b border-l-slate-500 space-y-3 mb-5'>
                 <div className='flex justify-between items-center w-full'>
                     <div className='flex justify-left itmes-center space-x-1'>
                         <div className='w-full h-full flex justify-center items-center'>
@@ -36,11 +58,16 @@ const PostCardDetail = () => {
                         </div>
                     </div>
                     <div className='flex'>
-                        <img src={Options} alt="" className='w-4 h-4 hover:opacity-40 transition duration-200 cursor-pointer' />
+                        <img 
+                            src={Options} 
+                            alt="" 
+                            className='w-4 h-4 hover:opacity-40 transition duration-200 cursor-pointer' 
+                            onClick={handleOpenModal}
+                        />
                     </div>
                 </div>
                 <div className='w-full'>
-                    <img className='rounded w-full h-auto object-contain' src="https://images.unsplash.com/photo-1746540368676-3ea770f8b9e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMyfHRvd0paRnNrcEdnfHxlbnwwfHx8fHw%3D" alt="" />
+                    <Video src={yaoVideo} />
                 </div>
                 <div className='flex justify-between items-center pt-1'>
                     <div className='flex justify-center items-center space-x-3'>
@@ -48,7 +75,7 @@ const PostCardDetail = () => {
                             <img className='w-6 h-6 hover:opacity-40 transition duration-200 cursor-pointer' src={Favorite} alt="" />
                         </div>
                         <div>
-                            <img className='w-6 h-6 hover:opacity-40 transition duration-200 cursor-pointer' src={BubbleChat} alt="" />
+                            <img onClick={handleOpenModalComent} className='w-6 h-6 hover:opacity-40 transition duration-200 cursor-pointer' src={BubbleChat} alt="" />
                         </div>
                         <div>
                             <img className='w-6 h-6 hover:opacity-40 transition duration-200 cursor-pointer' src={Send} alt="" />
@@ -89,7 +116,7 @@ const PostCardDetail = () => {
                                 Post
                             </p>
                         )}
-                        <div>
+                        <div className='pl-1'>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
@@ -102,6 +129,16 @@ const PostCardDetail = () => {
                     </div>
                 </div>
             </div>
+            <ModalOptions isOpen={isModalOpen} onClose={handleCloseModal} />
+            <ModalComent 
+                isOpen={isModalComentOpen} 
+                onClose={handleCloseModalComent} 
+                imgPost={"https://scontent.fdad1-4.fna.fbcdn.net/v/t1.6435-9/168097618_299591011730966_6867439069244117810_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHdQU1K4xDuznr4W2CDtTjWqJSw8hTVZzColLDyFNVnMKVoAOG6BZlZGl4QaMFJN5c0Na9xoXLzilVYfcawXJKy&_nc_ohc=Ts4OuJNcNFYQ7kNvwGwATpN&_nc_oc=AdlEgLDc_YUdq1c_zvunXZczUeMBIuwYcg3CmjmU6G9eBpxmYvkOAKOAPMNu25rybLxJZldH1djb22CG0AhBxrLP&_nc_zt=23&_nc_ht=scontent.fdad1-4.fna&_nc_gid=NOtOvTxukoS9GqijeAznqg&oh=00_AfKO-gz58YZ3W2MLjOBrOZSHa24WpoNA6p13IbIvNYAHug&oe=6863A3EB"} 
+                avatar={"https://i.pinimg.com/736x/77/9c/2c/779c2cabb9055ef0803af0ff09c0ba1d.jpg"} 
+                name={"6igmoid"} 
+                caption={""} 
+                detail={""}
+            />
         </div>
     )
 }

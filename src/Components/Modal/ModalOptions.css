@@ -1,0 +1,56 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.modal-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-button {
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.option-button:hover {
+    background-color: #f5f5f5;
+}
+
+.option-button.report, 
+.option-button.unfollow {
+    color: #ed4956;
+    font-weight: 700;
+}
+.option-button.cancel {
+    font-weight: 600;
+} 

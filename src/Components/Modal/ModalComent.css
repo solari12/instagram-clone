@@ -1,0 +1,62 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+body.modal-open-comment {
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal-container {
+    display: flex;
+    background-color: white;
+    width: 75%;
+    height: 95%;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    animation: zoomIn 0.1s ease;
+    transform-origin: center;
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.modal-content-comment {
+    max-width: 65%;
+    flex-grow: 1;    
+    background-color: black;
+    overflow: hidden;
+}
+
+.comment-section {
+    flex-shrink: 1;
+    border-left: 1px solid #eee;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+/* Custom scrollbar styling */
+.comment-section::-webkit-scrollbar {
+    width: 0px;  /* For Chrome, Safari and Opera */
+}
+
+.comment-section {
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none;  /* For Firefox */
+}

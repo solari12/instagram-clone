@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './Homeright.css'
 const Homeright = () => {
   return (
-    <div>Homeright</div>
+    <div className='Homeright'></div>
   )
 }
 
