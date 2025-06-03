@@ -15,7 +15,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className='flex-1 flex justify-center items-start'>
-          <Homeright/>
+          <Homeright image={"https://i.pinimg.com/736x/10/2a/40/102a40822dd46c8ab65b6b9e50b898f8.jpg"} name={"6igmoid"} fullname={"Nguyễn Văn Tuấn"} />
         </div>
       </div>
     </div>

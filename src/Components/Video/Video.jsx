@@ -25,7 +25,7 @@ const Video = ({ src }) => {
     };
 
     return (
-        <div className="video-container">
+        <div className="video-container rounded overflow-hidden">
             <video
                 ref={videoRef}
                 className="video-player"
