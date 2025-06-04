@@ -7,7 +7,8 @@ import Login from '../Pages/LoginPage/LoginPage'
 import Register from '../Pages/RegisterPage/RegisterPage'
 const Router = () => {
     const location = useLocation();
-    const isLoginPage = location.pathname === "/login" || "/register";
+    const isLoginPage = location.pathname === "/login" || location.pathname === "/register";
+
 
     if (isLoginPage) {
         return (
