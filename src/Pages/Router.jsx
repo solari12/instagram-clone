@@ -1,13 +1,25 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Sidebar from '../Components/Sidebar'
 import HomePage from './HomePage/HomePage'
 import Profile from './ProfilePage/Profile'
+import Login from '../Pages/LoginPage/LoginPage'
 const Router = () => {
+    const location = useLocation();
+    const isLoginPage = location.pathname === "/login";
+
+    if (isLoginPage) {
+        return (
+            <Routes>
+                <Route path="/login" element={<Login />} />
+            </Routes>
+        );
+    }
+
     return (
         <div>
             <div className='flex'>
-                <div className='w-[20%] border border-l-slate-500 pl-10'>
+                <div className='w-[19%] border border-l-slate-500 pl-10'>
                     <Sidebar />
                 </div>
                 <div className='w-full flex justify-center'>

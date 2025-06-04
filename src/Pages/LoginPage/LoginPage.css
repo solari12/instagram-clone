@@ -1,0 +1,57 @@
+input:focus {
+    outline: none;
+    border-color: rgba(156, 163, 175, 0.8); 
+  }
+
+.input-container {
+    position: relative;
+}
+
+.input-field {
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 6px; 
+    padding-left: 8px; 
+    padding-right: 8px;
+    border: 1px solid #dbdbdb; 
+    transition: border-color 0.2s ease-in-out;
+}
+
+.input-field:focus {
+    border-color: #a8a8a8;
+}
+
+.input-label {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    color: #8e8e8e;
+    pointer-events: none;
+    transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.input-container.active .input-label {
+    top: 0.625rem;
+    font-size: 10px;
+    color: #a8a8a8;
+}
+
+.input-container.active .input-field {
+    border-color: #a8a8a8;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-clear-button {
+  display: none !important;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
+}
